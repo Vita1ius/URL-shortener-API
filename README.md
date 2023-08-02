@@ -1,53 +1,68 @@
-Project URL-shortener-API
+# URL-shortener-API
 
-Getting Started
+Welcome to the URL-shortener-API repository! This project aims to provide a URL shortening service.
+
+## Getting Started
 
 To get started with the project, follow the steps below:
-Prerequisites
+
+### Prerequisites
 
 Before running the application, ensure you have the following installed on your system:
 
-    Node.js and npm (Node Package Manager)
-    Docker (for running the database using Docker Compose)
+- Node.js and npm (Node Package Manager)
+- Docker (for running the database using Docker Compose)
 
-Installation
+### Installation
 
-    Clone the repository:
+1. Clone the repository:
 
-https://github.com/Vita1ius/URL-shortener-API.git
+```
+git clone https://github.com/Vita1ius/URL-shortener-API.git
+```
 
-    Install the project dependencies:
+2. Install the project dependencies:
 
+```
 npm install
+```
 
-Database Setup
+### Configure the Environment
+
+Create a `.env` file in the root of the project and add the following line, replacing `db_link` with your actual database link:
+
+```
+DATABASE_URL="postgresql://postgres:postgres@localhost:5432/db_link?schema=public"
+```
+
+### Database Setup
 
 For the database, this project uses PostgreSQL. To set up the database, follow these steps:
 
-    Make sure Docker is installed and running on your system.
+1. Make sure Docker is installed and running on your system.
 
-    Start the PostgreSQL database using Docker Compose:
+2. Start the PostgreSQL database using Docker Compose:
 
+```
 docker-compose up -d
+```
 
-    Create a .env file in the root of the project and add the following line, replacing db_link with your actual database link:
+3. Run the Prisma migration to initialize the database:
 
-makefile
-
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/db_link?schema=public"
-
-    Run the Prisma migration to initialize the database:
-
-csharp
-
+```
 npx prisma migrate dev --name init
+```
 
-Running the Application
+### Running the Application
 
 Now that everything is set up, you can start the development server:
 
-arduino
-
+```
 npm run dev
+```
 
-The application should now be running on http://localhost:3000.
+The application should now be running on `http://localhost:3000`.
+
+If you have any questions or suggestions, feel free to contact us at [your_email@example.com].
+
+Happy coding!
