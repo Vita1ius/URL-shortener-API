@@ -62,7 +62,3 @@ npm run dev
 ```
 
 The application should now be running on `http://localhost:3000`.
-
-If you have any questions or suggestions, feel free to contact us at [your_email@example.com].
-
-Happy coding!
