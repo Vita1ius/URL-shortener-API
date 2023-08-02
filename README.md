@@ -66,6 +66,7 @@ The application should now be running on `http://localhost:3000`.
 Using the REST API
 
 You can access the REST API of the server using the following endpoints:
+
 GET
 
     /:shortUrl: Redirect to the original long URL
